@@ -42,3 +42,14 @@ The main features of this module are summarized:
 [2] M. Shimrat, Algorithm 112: Position of point relative to polygon, Commun. ACM 5 (8) (1962) 434.
 
 [3] K. Hormann, A. Agathos, The point in polygon problem for arbitrary Computational Geometry 20 (3) (2001) 131-144.
+
+# Acknowledgements
+
+The authors wish to thank:
+
+• Prof. Richard D. Sandberg from the University of Melbourne, and his fluid solver HiPSTAR.
+
+• Research Associate Baoqing Meng from the Chinese Academic of Sciences and Prof. Baolin Tian from Beihang University, and their helpful suggestions.
+
+• Mr Zi-Mo Liao from the University of Science and Technology of China, and his helpful instructions.
+
