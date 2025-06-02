@@ -37,13 +37,13 @@ The main features of this module are summarized:
 
 7.	The subroutine ***capture_particles_data*** collect the instantaneous data of all particles, and the subroutine ***collect_collision_particles_data*** saves the data of particles which collide with the blade wall. Additionally, the subroutine ***process_particles_statistics*** processes the statistics of particles for postprocessing, which includes subroutines ***collect_particles_statistics*** and ***write_particles_statistics***. In the present module, statistics of particles include:
      
-      (1) particles number
+      (1) the number of particles
    
-      (2) particles $x$-velocity: upar
+      (2) particle's $x$-velocity: upar
 
-      (3) particles $y$-velocity: vpar
+      (3) particle's $y$-velocity: vpar
 
-      (4) particles $z$-velocity: wpar
+      (4) particle's $z$-velocity: wpar
 
       (5) upar*upar
 
