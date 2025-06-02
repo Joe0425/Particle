@@ -17,4 +17,5 @@ The main features of this module are summarized:
 
 1. Based on the particle location, each particle that is located in the valid domain is assigned to either the background H-type grid or the O-type grid. For particles located in overlapping regions, they are stored in the O-type grid. This procedure is conducted before the simulation by the subroutine ***read_particles_data_init***, and the implementation details are shown in the figure below.
    <div align=center><img width="400" src="./images/fig2.png"/></div>
-   In this process, owing to the curved geometry of the O-type grid, both the ray-casting [2] and angle summation algorithms [3] are utilized, corresponding to the functions particle_in_polygon and particle_in_convex_quadrilateral, respectively.
+   
+   In this process, owing to the curved geometry of the O-type grid, both the ray-casting [2] and angle summation algorithms [3] are utilized, corresponding to the functions ***particle_in_polygon*** and ***particle_in_convex_quadrilateral***, respectively.
