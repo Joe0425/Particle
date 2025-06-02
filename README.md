@@ -51,5 +51,5 @@ The authors wish to thank:
 
 • Research Associate Baoqing Meng from the Chinese Academic of Sciences and Prof. Baolin Tian from Beihang University, and their helpful suggestions.
 
-• Mr Zi-Mo Liao from the University of Science and Technology of China, and his helpful instructions.
+• Mr. Zi-Mo Liao from the University of Science and Technology of China, and his helpful instructions.
 
