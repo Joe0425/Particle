@@ -19,10 +19,10 @@ The main features of this module are summarized:
    <div align=center><img width="400" src="./images/fig2.png"/></div>
    
    In this process, owing to the curved geometry of the O-type grid, both the ray-casting [2] and angle summation [3] algorithms are utilized, corresponding to the functions ***particle_in_polygon*** and ***particle_in_convex_quadrilateral***, respectively.
-2. Neglecting particle rotation and temperature, each point particle is modeled as a spherical rigid body. Moreover, particle-wall interactions are described by the hard-sphere model, which is achieved by the subroutine ***bounce_particles***.
+2. Neglecting particle rotation and temperature, each point particle is modeled as a spherical rigid body. Moreover, particle-wall interactions are described by the hard-sphere model [4], which is achieved by the subroutine ***bounce_particles***.
    <div align=center><img width="400" src="./images/fig3.png"/></div>
 
-3. Affected by the drag force calculated in the subroutine ***compute_particles_force***, both the particle location and velocity need to be updated at each time step. In the present study, the second-order Velocity-Verlet algorithm is used, which is implemented by the subroutine ***timeadvance_redistribute_particles***. Besides, a trilinear scheme is applied for interpolation, where the weights are obtained by the function ***interpolation_weights***.
+3. Affected by the drag force calculated in the subroutine ***compute_particles_force***, both the particle location and velocity need to be updated at each time step. In the present study, the second-order Velocity-Verlet algorithm [5] is used, which is implemented by the subroutine ***timeadvance_redistribute_particles***. Besides, a trilinear scheme is applied for interpolation, where the weights are obtained by the function ***interpolation_weights***.
 
 4. Utilizing the MPI parallelization strategy, particles in each block are handled separately on each processor unless they pass through the interface between blocks, namely the outer boundary of the O-type grid. Consequently, different situations may occur, which should be handled carefully. This tricky problem is solved in the subroutine ***timeadvance_redistribute_particles***, and the details are shown by the flow chart below.
    <div align=center><img width="800" src="./images/fig4.jpg"/></div>
@@ -42,6 +42,10 @@ The main features of this module are summarized:
 [2] M. Shimrat, Algorithm 112: Position of point relative to polygon, Commun. ACM 5 (8) (1962) 434.
 
 [3] K. Hormann, A. Agathos, The point in polygon problem for arbitrary Computational Geometry 20 (3) (2001) 131-144.
+
+[4] C. T. Crowe, J. D. Schwarzkopf, M. Sommerfeld, Y. Tsuji, Multiphase Flows with Droplets and Particles, CRC Press, 2011.
+
+[5] A. M. Tartakovsky, A. Panchenko, Pairwise force smoothed particle hydrodynamics model for multiphase flow: Surface tension and contact line dynamics, J. Comp. Phys. 305 (2016) 1119–1146.
 
 # Acknowledgements
 
