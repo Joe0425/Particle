@@ -29,7 +29,7 @@ The main features of this module are summarized:
 
 5. Redistributing a particle to the correct processor and grid cell incurs a high computational cost; therefore, two optimization strategies are implemented to enhance performance. One is inter-block mapping within overlapping zones, which is initialized in the subroutine ***set_mapping_indexes***. Based on this mapping, the particle in a cell will first be redistributed to the corresponding cell.
   <div align=center><img width="400" src="./images/fig5.png"/></div>
-  
+   
    The other is a search-locate algorithm based on particle velocity. If the particle is located in the H-type block, then the velocity is decomposed in the global Cartesian coordinates. In comparison, if the particle is located in the O-type block, then the velocity is decomposed in the local orthogonal coordinate system (the tangent and normal directions). Starting from the current grid cell, the search scope is expanded from inner to outer layers, and the local strategy is implemented in subroutines ***update_B_grid_ij_particle*** and ***update_O_grid_ij_particle_prediction***.
    <div align=center><img width="800" src="./images/fig6.jpg"/></div>
 
