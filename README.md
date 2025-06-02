@@ -7,6 +7,8 @@ A particle tracking module designed for multi-block overset grids [1] is present
 # Information
 The present module for particle tracking is developed by Mr. Taiyang Wang, who is funded and advised by Prof. Yaomin Zhao from Peking University.
 
+Licensing provisions: GPLv3
+
 Programming language: Fortran
 
 External library: MPI
