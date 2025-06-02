@@ -21,3 +21,7 @@ The main features of this module are summarized:
    In this process, owing to the curved geometry of the O-type grid, both the ray-casting [2] and angle summation algorithms [3] are utilized, corresponding to the functions ***particle_in_polygon*** and ***particle_in_convex_quadrilateral***, respectively.
 2. Neglecting particle rotation and temperature, each point particle is modeled as a spherical rigid body. Moreover, particle-wall interactions are described by the hard-sphere model, which is achieved by the subroutine ***bounce_particles***.
    <div align=center><img width="400" src="./images/fig3.png"/></div>
+
+3. Affected by the drag force calculated in the subroutine ***compute_particles_force***, both the particle location and velocity need to be updated at each time step. In the present study, the second-order Velocity-Verlet algorithm is used, which is implemented by the subroutine ***timeadvance_redistribute_particles***. Besides, a trilinear scheme is applied for interpolation, where the weights are obtained by the function ***interpolation_weights***.
+
+4. 4.	Utilizing the MPI parallelization strategy, particles in each block are handled separately on each processor unless they pass through the interface between blocks, namely the outer boundary of the O-type grid. Consequently, different situations may occur, which should be handled carefully. This tricky problem is solved in the subroutine ***timeadvance_redistribute_particles***, and the details are shown by the flow chart below.
