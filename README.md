@@ -9,7 +9,7 @@ The present module for particle tracking is developed by Mr. Taiyang Wang, who i
 
 Programming language: Fortran
 
-External libraries: MPI
+External library: MPI
 
 # Features
 
