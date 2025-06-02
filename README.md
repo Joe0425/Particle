@@ -33,4 +33,12 @@ The main features of this module are summarized:
    The other is a search-locate algorithm based on particle velocity. If the particle is located in the H-type block, then the velocity is decomposed in the global Cartesian coordinates. In comparison, if the particle is located in the O-type block, then the velocity is decomposed in the local orthogonal coordinate system (the tangent and normal directions). Starting from the current grid cell, the search scope is expanded from inner to outer layers, and the local strategy is implemented in subroutines ***update_B_grid_ij_particle*** and ***update_O_grid_ij_particle_prediction***.
    <div align=center><img width="800" src="./images/fig6.jpg"/></div>
 
-8.	Throughout the simulation, particles are continuously added from the inlet at fixed locations by the subroutine ***add_particles***, and their velocities are interpolated from the fluid domain. Here, the information about the added particles is obtained before the simulation by the subroutine ***read_added_particles_init***, where the file 'ADDED_PARTICLES_INPUT.dat' is necessary. Additionally, particles that exit the domain are removed from the simulation.
+6.	Throughout the simulation, particles are continuously added from the inlet at fixed locations by the subroutine ***add_particles***, and their velocities are interpolated from the fluid domain. Here, the information about the added particles is obtained before the simulation by the subroutine ***read_added_particles_init***, where the file 'ADDED_PARTICLES_INPUT.dat' is necessary. Additionally, particles that exit the domain are removed from the simulation.
+
+# References
+
+[1] M. Deuse, R. D. Sandberg, Implementation of a stable high-order overset grid method for high-fidelity simulations, Comp. Fluids 211 (2020) 104449.
+
+[2] M. Shimrat, Algorithm 112: Position of point relative to polygon, Commun. ACM 5 (8) (1962) 434.
+
+[3] K. Hormann, A. Agathos, The point in polygon problem for arbitrary Computational Geometry 20 (3) (2001) 131-144.
