@@ -39,23 +39,23 @@ The main features of this module are summarized:
      
       (1) particles number
    
-   (2) particles $x$-velocity: upar
+      (2) particles $x$-velocity: upar
 
-   (3) particles $y$-velocity: vpar
+      (3) particles $y$-velocity: vpar
 
-   (4) particles $z$-velocity: wpar
+      (4) particles $z$-velocity: wpar
 
-   (5) upar*upar
+      (5) upar*upar
 
-   (6) vpar*vpar
+      (6) vpar*vpar
 
-   (7) wpar*wpar
+      (7) wpar*wpar
 
-   (8) upar*vpar
+      (8) upar*vpar
 
-   (9) upar*wpar
+      (9) upar*wpar
 
-   (10) vpar*wpar
+      (10) vpar*wpar
 
 # References
 
