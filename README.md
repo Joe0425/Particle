@@ -36,9 +36,10 @@ The main features of this module are summarized:
 6.	Throughout the simulation, particles are continuously added from the inlet at fixed locations by the subroutine ***add_particles***, and their velocities are interpolated from the fluid domain. Here, the information about the added particles is obtained before the simulation by the subroutine ***read_added_particles_init***, where the file 'ADDED_PARTICLES_INPUT.dat' is necessary. Additionally, particles that exit the domain are removed from the simulation.
 
 7.	The subroutine ***capture_particles_data*** collect the instantaneous data of all particles, and the subroutine ***collect_collision_particles_data*** saves the data of particles which collide with the blade wall. Additionally, the subroutine ***process_particles_statistics*** processes the statistics of particles for postprocessing, which includes subroutines ***collect_particles_statistics*** and ***write_particles_statistics***. In the present module, statistics of particles include:
+   
    (1) particles number
    
-   (2) particles $x$-velocity: upar
+   (2) particles $x$-velocity: **upar**
 
    (3) particles $y$-velocity: vpar
 
