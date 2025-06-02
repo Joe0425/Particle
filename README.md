@@ -20,3 +20,4 @@ The main features of this module are summarized:
    
    In this process, owing to the curved geometry of the O-type grid, both the ray-casting [2] and angle summation algorithms [3] are utilized, corresponding to the functions ***particle_in_polygon*** and ***particle_in_convex_quadrilateral***, respectively.
 2. Neglecting particle rotation and temperature, each point particle is modeled as a spherical rigid body. Moreover, particle-wall interactions are described by the hard-sphere model, which is achieved by the subroutine ***bounce_particles***.
+   <div align=center><img width="400" src="./images/fig3.png"/></div>
