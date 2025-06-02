@@ -35,6 +35,8 @@ The main features of this module are summarized:
 
 6.	Throughout the simulation, particles are continuously added from the inlet at fixed locations by the subroutine ***add_particles***, and their velocities are interpolated from the fluid domain. Here, the information about the added particles is obtained before the simulation by the subroutine ***read_added_particles_init***, where the file 'ADDED_PARTICLES_INPUT.dat' is necessary. Additionally, particles that exit the domain are removed from the simulation.
 
+7.	The subroutine ***capture_particles_data*** collect the instantaneous data of all particles, and the subroutine ***collect_collision_particles_data*** saves the data of particles which collide with the blade wall.
+
 # References
 
 [1] M. Deuse, R. D. Sandberg, Implementation of a stable high-order overset grid method for high-fidelity simulations, Comp. Fluids 211 (2020) 104449.
