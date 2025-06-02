@@ -4,12 +4,12 @@ A particle tracking module designed for multi-block overset grids [1] is present
 
 <div align=center><img width="800" src="./images/fig1.png"/></div>
 
+
 The present module for particle tracking is developed by Mr. Taiyang Wang, who is funded and advised by Prof. Yaomin Zhao from Peking University.
 
 Programming language: Fortran
 
 External libraries: MPI
-
 
 The main features of this module are summarized:
 - 1. Based on the particle location, each particle that is located in the valid domain is assigned to either the background H-type grid or the O-type grid. For particles located in overlapping regions, they are stored in the O-type grid. This procedure is conducted before the simulation by the subroutine ***read_particles_data_init***, and the implementation details are shown in the figure below.
